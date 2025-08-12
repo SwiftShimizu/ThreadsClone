@@ -12,6 +12,7 @@ struct RegistrationView: View {
     @State private var password = ""
     @State private var fullname = ""
     @State private var username = ""
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         Spacer()
@@ -48,7 +49,7 @@ struct RegistrationView: View {
         Divider()
         
         Button {
-            
+            dismiss()
         } label: {
             HStack(spacing: 3) {
                 Text("もうアカウント持ってます？")
